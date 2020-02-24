@@ -9,6 +9,7 @@ var speedSlider;
 var animationButton;
 var radiusSlider;
 var saveButton;
+var createColorPicker;
 //isAnimated boolean.
 var animate = true;
 

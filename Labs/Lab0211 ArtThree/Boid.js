@@ -10,6 +10,7 @@ var speedSlider;
 var animationButton;
 var radiusSlider;
 var saveButton;
+var createColorPicker;
 //isAnimated boolean.
 var animate = true;
 
@@ -82,7 +83,7 @@ var angle = 0;
 function draw() {
 
   //Get the values from DOM elements.
-  var size = sizeSlider.value();
+  let size = sizeSlider.value();
   var animationSpeed = speedSlider.value()/100;
   var backgroundColor = backgroundColorPicker.value();
   var mainColor = colorPicker.value();
