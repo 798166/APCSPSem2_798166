@@ -2,29 +2,25 @@
 // 	30 January 2020
 //  This is a comment
 //  The setup function function is called once when your program begins
-var boids = [];  //global variable to make boids
-function setup() {
+var particles = [];
+function setup() {//sets up the canvas
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
-  background(255);
+  background(5, 5, 5);
   fill(200, 30, 150);
-  loadBoids(80); //eighty boids appear on screen
-
-
+  loadParticles(6);//load 6 particles onto the screen
 }
 
 //  The draw function is called @ 30 fps
-function draw(){  //run runBoids function
-runBoids();
+function draw() {
+  background(255, 255, 255, 2);//background color
+  for(var i = 0; i < particles.length; i++){//draws the particles
+    particles[i].run();
+  }
 }
 
-function loadBoids(n){  //make array of boids appear
-  for(var i = 0; i < n; i++){
-    boids[i] = new Boid(400,400, random(-2,2), random(-2,2)); //appear at middle of the screen, velocity and acceleration in between -2 and 2
-}
-}
-function runBoids(){
-  for(var i = 0; i < boids.length; i++){ //run boid
-    boids[i].run();
+function loadParticles(x){//creates the particles
+  for(var i = 0; i < x; i++){//creates x number of new particles
+    particles[i] = new Particle(random(10, 700), random(10, 700))
   }
 }
