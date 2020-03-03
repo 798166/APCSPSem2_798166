@@ -9,11 +9,12 @@ var health = 10
 var gameState = 1;
 var gameMode;
 var b;
+var btnEasy, btnMed, btnHard;
 function setup() {
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
   background(20, 20, 20);
-  makeButtons;
+  makeButtons();
 } //end of setup
 
 function draw() {
@@ -30,7 +31,7 @@ function draw() {
   }
   background(255,255,255, 60);
   fill(2, 2, 2)
-  if(lives === 0) gameState = 3;
+  if(health === 0) gameState = 3;
 } //end of draw
 
 function makeButtons(){
