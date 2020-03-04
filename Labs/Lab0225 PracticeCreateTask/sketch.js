@@ -64,7 +64,8 @@ function playGame(){
 }//end of playGame
 
 function endGame(){
-  background(65,55,237);
+  background(65,55,237);\
+  text('')
 } //end of endGame
 
 function loadObjects(b){
