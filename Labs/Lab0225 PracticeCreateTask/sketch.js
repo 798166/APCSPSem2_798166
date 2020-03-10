@@ -65,8 +65,8 @@ function playGame(){
 
 function endGame(){
   background(65,55,237);
-  textSize(60);
-  text('you LOSE! Wanna play again? Refresh the page!'50, 400);
+  textSize(30);
+  text('you LOSE! Wanna play again? Refresh the page!', 50, 400);
 } //end of endGame
 
 function loadObjects(b){
